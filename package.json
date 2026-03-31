@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-jokes",
+  "version": "0.1.0",
+  "description": "MCP server for jokes — random jokes, search, and categories via JokeAPI",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "jokes", "humor", "jokeapi", "pipeworx"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-jokes"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
