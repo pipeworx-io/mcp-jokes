@@ -1,13 +1,3 @@
-/**
- * Jokes MCP — wraps JokeAPI v2 (free, no auth)
- *
- * Tools:
- * - get_joke: Get a random joke by category and type
- * - search_jokes: Search jokes by keyword
- * - get_joke_categories: List available joke categories
- * - get_joke_flags: List available joke flags/filters
- */
-
 interface McpToolDefinition {
   name: string;
   description: string;
@@ -22,6 +12,17 @@ interface McpToolExport {
   tools: McpToolDefinition[];
   callTool: (name: string, args: Record<string, unknown>) => Promise<unknown>;
 }
+
+/**
+ * Jokes MCP — wraps JokeAPI v2 (free, no auth)
+ *
+ * Tools:
+ * - get_joke: Get a random joke by category and type
+ * - search_jokes: Search jokes by keyword
+ * - get_joke_categories: List available joke categories
+ * - get_joke_flags: List available joke flags/filters
+ */
+
 
 const BASE_URL = 'https://v2.jokeapi.dev';
 

@@ -1,6 +1,6 @@
 # mcp-jokes
 
-MCP server for jokes. Get random jokes, search by keyword, browse categories, and filter with safe mode via JokeAPI — free, no API key required.
+Jokes MCP — wraps JokeAPI v2 (free, no auth)
 
 Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
 
@@ -8,19 +8,18 @@ Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
 
 | Tool | Description |
 |------|-------------|
-| `get_joke` | Get a random joke by category (Programming, Pun, Dark, etc.) |
-| `search_jokes` | Search jokes by keyword |
-| `get_joke_categories` | List all available joke categories |
-| `get_joke_flags` | List available content flags/filters |
+| `search_jokes` | Search for jokes containing a specific keyword or phrase. |
+| `get_joke_categories` | List all available joke categories supported by JokeAPI. |
 
 ## Quick Start
+
+Add to your MCP client config:
 
 ```json
 {
   "mcpServers": {
     "jokes": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://gateway.pipeworx.io/jokes/mcp"]
+      "url": "https://gateway.pipeworx.io/jokes/mcp"
     }
   }
 }
