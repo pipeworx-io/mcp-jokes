@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/jokes",
   "title": "Jokes",
   "description": "Jokes MCP — wraps JokeAPI v2 (free, no auth)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/jokes",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-jokes",
