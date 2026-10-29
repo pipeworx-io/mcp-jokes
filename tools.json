@@ -1,0 +1,67 @@
+[
+  {
+    "name": "get_joke",
+    "description": "Get a random joke, optionally filtered by category (e.g., 'general', 'programming') or type ('single' or 'twopart'). Returns joke text, category, and content flags.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Joke category. One of: Any, Programming, Misc, Dark, Pun, Spooky, Christmas. Defaults to \"Any\"."
+        },
+        "type": {
+          "type": "string",
+          "description": "Joke type. One of: single, twopart. Omit to allow either type."
+        },
+        "safe_mode": {
+          "type": "boolean",
+          "description": "When true, only return jokes that are flagged safe by JokeAPI. Defaults to true."
+        }
+      }
+    }
+  },
+  {
+    "name": "search_jokes",
+    "description": "Search jokes by keyword or phrase. Returns matching jokes with categories, types, and content flags.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Keyword or phrase to search for within joke text."
+        },
+        "category": {
+          "type": "string",
+          "description": "Limit search to a category. One of: Any, Programming, Misc, Dark, Pun, Spooky, Christmas. Defaults to \"Any\"."
+        },
+        "amount": {
+          "type": "number",
+          "description": "Number of jokes to return. Defaults to 5."
+        },
+        "safe_mode": {
+          "type": "boolean",
+          "description": "When true (the default), only return jokes JokeAPI flags as safe. Set false to include Dark and other unsafe-flagged categories."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_joke_categories",
+    "description": "List all available JokeAPI joke categories (e.g., Programming, Misc, Dark, Pun, Spooky, Christmas). Use the returned category names as the category input to get_joke or search_jokes.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "get_joke_flags",
+    "description": "List all content filter flags (e.g., explicit, political, racist). Use to understand what filters exclude.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
