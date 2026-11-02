@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-jokes",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Jokes MCP — wraps JokeAPI v2 (free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "jokes",
     "gatewaySlug": "jokes",
-    "sourceHash": "v1-04115245707733b49adfef2ca1556e343b58e71d8262a726b39b9edc513068f4",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-74ba5a4d6df880815eca44910a7cf7b79045b5a906351fec86038399eefeb749",
+    "sourceCommit": "236b0a46d91f343fe094da9f499c378e88f78312"
   }
 }
